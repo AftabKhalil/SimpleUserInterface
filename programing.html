@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <style>
+            p{
+                margin: 0px;
+            }
+
+            .red
+            {
+                color: red;
+            }
+
+            .blue
+            {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">Into to javascript</h1>
+        Write a number : <input type="number" id="number" min="0" />
+        <span onclick="generateTable()">Generate Table</span>
+        <p id="res" ></p>
+
+        <script>
+            console.log("Hello World!");
+
+            var a = 10;
+            var b = 3;
+            var c = a / b;
+            console.log("Value of c is " + c);
+
+            if(a == b)
+            {
+                console.log("a is equal to b");
+            }else 
+            {
+                console.log("a is not equal to b");
+            
+            }
+
+            function generateTable(){
+                var r = document.getElementById('number').value;
+
+                if(r%2 ==0){
+                    c = 'red';
+                }else{
+                    c = 'blue';
+                }
+
+                for(x = 0; x<=10; x++)
+                {
+                    document.getElementById('res').innerHTML += '<p class="'+c+'">'+r +" * "+ x +" = "+(r*x)+'</p><br>';
+                }
+            }
+
+            var t = 4;
+            for(x = 0; x<=10; x++)
+            {
+                console.log(t +" * "+ x +" = "+(t*x));
+                document.writeln('<p>'+t +" * "+ x +" = "+(t*x)+'</p><br>');
+            }
+
+
+            c = 'h';
+            switch(c){
+                case 'a' : console.log("its a ");
+                break;
+                case 'b' : console.log("its b ");
+                break;
+                case 'c' : console.log("its c ");
+                break;
+                default:console.log("unknown ");
+            }
+
+
+            var s = "Hello World";
+            s  += " and Javascript";
+
+            console.log(s);
+
+
+            function plus( a,  b){
+                var c = a+b;
+                return c;
+            }
+
+            z = plus(10,20);
+
+            console.log("z = "+z);
+
+
+
+            
+
+
+        </script>
+    </body>
+</html>
